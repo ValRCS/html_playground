@@ -1,0 +1,41 @@
+*, *:before, *:after {
+
+    box-sizing: border-box;
+  }
+
+html {
+    font-size: 10px;
+}
+
+div {
+    width: 20rem;
+    /* height: 50px; */
+    border: 0.5rem solid green;
+}
+
+.box1 {
+    box-sizing: border-box;
+    height: 15rem;
+    padding: 2rem;
+    /* margin: 30px; */
+}
+
+.box2 {
+    width: 30rem;
+    height: 10rem;
+    border: 1px solid blue;
+    box-sizing: border-box;
+  }
+  
+  .box3 {
+    width: 30rem;
+    height: 10rem;
+    padding: 5rem;
+    border: 0.1rem solid red;
+    box-sizing: border-box;
+  }
+
+
+.orange-text {
+    color: rgb(94, 119, 165);
+    }
