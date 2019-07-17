@@ -1,0 +1,50 @@
+.HolyGrail {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: gray;
+  }
+  
+  .HolyGrail-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+  }
+
+  header {
+      background-color: brown;
+  }
+  .HolyGrail-content {
+    flex: 1;
+    background-color: green;
+  }
+  
+  .HolyGrail-nav, .HolyGrail-ads {
+    /* 12em is the width of the columns */
+    flex: 0 0 12em;
+    background-color: aqua;
+  }
+  
+  .HolyGrail-nav {
+    /* put the nav on the left */
+    order: -1;
+  }
+
+  footer {
+      background-color: aquamarine;
+  }
+
+  @media (min-width: 768px) {
+    .HolyGrail-body {
+      flex-direction: row;
+      flex: 1;
+    }
+    .HolyGrail-content {
+      flex: 1;
+    }
+    .HolyGrail-nav, .HolyGrail-ads {
+      /* 12em is the width of the columns */
+      flex: 0 0 12em;
+    }
+  }
