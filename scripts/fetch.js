@@ -10,7 +10,8 @@ function processJSON(json) {
     //loop goes here
     //we add each li element here
     const li = document.createElement("li");
-    li.innerText = json[0]['title'];
+    li.innerText = json[3]['title'];
+    if (json[3]['completed']) li.innerText += " DONE";
     ul.appendChild(li);
 
     //we should end loop here after everything is added
