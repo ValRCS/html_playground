@@ -4,6 +4,19 @@ let maxvalues = 150;
 let myjson = {};
 
 
+function createChild(parent,data) {
+    const li = document.createElement("li");
+    li.innerText = data[i]['title'];
+    if (data[i]['completed']) li.innerText += " DONE";
+    parent.appendChild(li);
+}
+
+function createChildren(parent, data) {
+    for (let i = begvalue; i < data.length && i < maxvalues; i++ ) {
+        createChild(parent, data);
+    }
+}
+
 function processJSON(json) {
     console.log("Processing some json");
     // console.log(json);
@@ -12,14 +25,7 @@ function processJSON(json) {
     //loop goes here
     //we add each li element here
     console.log("maxvalues",maxvalues);
-    for (let i = begvalue; i < json.length && i < maxvalues; i++ ) {
-        const li = document.createElement("li");
-        li.innerText = json[i]['title'];
-        if (json[i]['completed']) li.innerText += " DONE";
-        ul.appendChild(li);
-    }
-
-
+    createChildren(ul, json);
     //we should end loop here after everything is added
     document.querySelector("main").appendChild(ul);
     myjson = json;
