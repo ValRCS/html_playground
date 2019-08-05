@@ -4,16 +4,16 @@ let maxvalues = 150;
 let myjson = {};
 
 
-function createChild(parent,data) {
+function createChild(parent,item) {
     const li = document.createElement("li");
-    li.innerText = data[i]['title'];
-    if (data[i]['completed']) li.innerText += " DONE";
+    li.innerText = item['title'];
+    if (item['completed']) li.innerText += " DONE";
     parent.appendChild(li);
 }
 
 function createChildren(parent, data) {
     for (let i = begvalue; i < data.length && i < maxvalues; i++ ) {
-        createChild(parent, data);
+        createChild(parent, data[i]);
     }
 }
 
